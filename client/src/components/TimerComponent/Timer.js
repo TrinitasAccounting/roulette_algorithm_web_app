@@ -6,10 +6,7 @@ import { useState } from "react";
 
 
 
-function Timer() {
-
-    const [accessGranted, setAccessGranted] = useState(false)
-
+function Timer({ accessGranted, setAccessGranted }) {
 
 
 
