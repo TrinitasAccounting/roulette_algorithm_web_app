@@ -31,24 +31,23 @@ function Timer({ accessGranted, setAccessGranted }) {
         <>
             {!accessGranted ?
                 <div style={{ color: 'red' }}>
-                    <h1>NO Acess</h1>
+                    <h1>Roulette Access Restricted</h1>
                 </div>
-
                 :
-
                 <div style={{ color: 'green' }}>
-                    <h1>YES Acess</h1>
+                    <h1>You now have access for 10 seconds</h1>
                 </div>
             }
-            <button onClick={handleClickToUnlock}>Unlock</button>
+            {/* <button onClick={handleClickToUnlock}>Unlock</button> */}
 
-            <button onClick={startTimerClick} style={{ padding: '1px', margin: '10px' }}>Start Timer</button>
+            {/* <button onClick={startTimerClick} style={{ padding: '1px', margin: '10px' }}>Start Timer</button> */}
 
             {/* Passing the accessGranted down so when the timer runs out, then the access can switch back */}
             {accessGranted ?
                 <CountdownTimer setAccessGranted={setAccessGranted} accessGranted={accessGranted} />
                 :
-                <h2>No timer because no access</h2>
+                // <h2>No timer because no access</h2>
+                <></>
             }
         </>
     )

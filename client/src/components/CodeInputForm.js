@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 
-function CodeInputForm({ formData, setFormData, handleSubmit }) {
+function CodeInputForm({ formData, setFormData, handleSubmit, wrongCodeDiv, setWrongCodeDiv }) {
 
     // initalizing state for the controlled form
     // const [formData, setFormData] = useState({
@@ -28,6 +28,7 @@ function CodeInputForm({ formData, setFormData, handleSubmit }) {
                 </label>
                 <input type="submit" value="Submit" />
             </form>
+            {wrongCodeDiv ? <h1 style={{ color: 'red' }}>Incorrect Code, Please Try Again</h1> : <></>}
 
         </>
     )
