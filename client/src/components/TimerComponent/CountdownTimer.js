@@ -9,7 +9,7 @@ const CountdownTimer = ({ accessGranted, setAccessGranted }) => {
     const Ref = useRef(null);
 
     // The state for our timer
-    const [timer, setTimer] = useState("00:00:10");
+    const [timer, setTimer] = useState("01:00:10");
 
     const getTimeRemaining = (e) => {
         const total =
@@ -52,7 +52,7 @@ const CountdownTimer = ({ accessGranted, setAccessGranted }) => {
         // If you adjust it you should also need to
         // adjust the Endtime formula we are about
         // to code next
-        setTimer("00:00:10");
+        setTimer("01:00:10");
 
         // If you try to remove this line the
         // updating of timer Variable will be
@@ -69,7 +69,7 @@ const CountdownTimer = ({ accessGranted, setAccessGranted }) => {
 
         // This is where you need to adjust if
         // you entend to add more time
-        deadline.setSeconds(deadline.getSeconds() + 10);
+        deadline.setSeconds(deadline.getSeconds() + 3610);
         return deadline;
     };
 

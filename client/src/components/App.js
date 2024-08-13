@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 
 import './App.css';
+import RouletteTable from "./RouletteDesign/RouletteTable";
 
 import Timer from "./TimerComponent/Timer";
 import CodeInputForm from "./CodeInputForm";
@@ -57,6 +58,11 @@ function App() {
         {!accessGranted ? <CodeInputForm formData={formData} setFormData={setFormData} handleSubmit={handleSubmit} wrongCodeDiv={wrongCodeDiv} setWrongCodeDiv={setWrongCodeDiv} /> : <></>}
 
         {/* {wrongCodeDiv ? <h1 style={{ color: 'red' }}>Incorrect Code, Please Try Again</h1> : <></>} */}
+      </div>
+      <div className='roulette-table-div'>
+
+        <RouletteTable />
+
       </div>
 
     </>
